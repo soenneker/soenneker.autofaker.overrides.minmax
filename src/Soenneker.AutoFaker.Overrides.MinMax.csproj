@@ -43,6 +43,6 @@
 
     <ItemGroup>
         <PackageReference Include="Soenneker.Dtos.MinMax" Version="3.0.57" />
-        <PackageReference Include="Soenneker.Utils.AutoBogus" Version="3.0.481" />
+        <PackageReference Include="Soenneker.Utils.AutoBogus" Version="3.0.483" />
     </ItemGroup>
 </Project>
