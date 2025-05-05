@@ -1,4 +1,4 @@
-# Contributing to Soenneker.AutoFaker.Overrides.MinMax
+﻿# Contributing to Soenneker.AutoFaker.Overrides.MinMax
 
 We're excited that you're interested in contributing!
 
