@@ -1,16 +1,15 @@
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.AutoFaker.Overrides.MinMax.Tests;
 
-[Collection("Collection")]
-public class MinMaxOverrideTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public class MinMaxOverrideTests : HostedUnitTest
 {
-    public MinMaxOverrideTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public MinMaxOverrideTests(Host host) : base(host)
     {
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
