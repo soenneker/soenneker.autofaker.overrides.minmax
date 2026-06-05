@@ -8,6 +8,10 @@ namespace Soenneker.AutoFaker.Overrides.MinMax;
 /// </summary>
 public class MinMaxOverride : AutoFakerOverride<Dtos.MinMax.MinMax>
 {
+    /// <summary>
+    /// Executes the generate operation.
+    /// </summary>
+    /// <param name="context">The context.</param>
     public override void Generate(AutoFakerOverrideContext context)
     {
         var target = (context.Instance as Dtos.MinMax.MinMax)!;
