@@ -5,14 +5,25 @@
 
 # Soenneker.AutoFaker.Overrides.MinMax
 
-An AutoFaker (AutoBogus) override for the DTO MinMax.
+An AutoFaker override that generates ordered decimal bounds for `MinMax` fixtures.
 
-## Install
+## Installation
 
 ```bash
 dotnet add package Soenneker.AutoFaker.Overrides.MinMax
 ```
 
-## What you get
+## Usage
 
-- `MinMaxOverride` — An AutoFaker (AutoBogus) override for the DTO MinMax.
+```csharp
+using Soenneker.AutoFaker.Overrides.MinMax;
+using Soenneker.Dtos.MinMax;
+using Soenneker.Utils.AutoBogus;
+
+var autoFaker = new AutoFaker();
+autoFaker.Config.Overrides = [new MinMaxOverride()];
+
+MinMax range = autoFaker.Generate<MinMax>();
+```
+
+`Min` is generated between `0.20` and `28.50`; `Max` is generated between that minimum and `30.00`. The invariant `Min <= Max` is therefore preserved. Values use Bogus's finance amount generator and its decimal precision.

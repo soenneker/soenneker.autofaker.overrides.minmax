@@ -16,7 +16,7 @@ public class MinMaxOverride : AutoFakerOverride<Dtos.MinMax.MinMax>
     {
         var target = (context.Instance as Dtos.MinMax.MinMax)!;
 
-        target.Max = context.Faker.Finance.Amount(0.2M, 30);
-        target.Min = context.Faker.Finance.Amount(0.2M, target.Max * .95M);
+        target.Min = context.Faker.Finance.Amount(0.2M, 28.5M);
+        target.Max = context.Faker.Finance.Amount(target.Min, 30M);
     }
 }
